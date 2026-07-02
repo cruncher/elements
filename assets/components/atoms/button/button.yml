@@ -30,6 +30,12 @@ variants:
     title: Tertiary states preview
     notes: |
       *For previewing purposes only. **Do not use in production!***
+  - name: gradient
+    title: Button gradient
+    notes: |
+      The Prism gradient button. Pill-shaped with the brand gradient fill
+      (`$gradient-prism`). The same gradient is available as a `.bg-gradient-prism`
+      utility for use on other components.
 notes: |
   Button is your interaction friend when you want people to complete an action. By clicking a button, people expect to trigger an event, confirm a form or load a new page. Don't put many buttons on one single page. The primary action should be obvious for people.
 

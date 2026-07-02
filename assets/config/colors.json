@@ -10,5 +10,21 @@
   "$black": "#212121",
   "$leman": "#00A79F",
   "$canard": "#007480",
-  "$canard-dark": "#004248"
+  "$canard-dark": "#004248",
+  "$ink": "#020618",
+  "$slate": "#45556C",
+  "$surface": "#F5F6F8",
+  "$hairline": "#CCCCCC",
+  "$accent-blue": "#0000DB",
+  "$accent-magenta": "#DB0059",
+  "$accent-green": "#00E200",
+  "$tint-lavender": "#F0F0FF",
+  "$tint-pink": "#FFEFF4",
+  "$tint-sky": "#DFEEFF",
+  "$tint-peach": "#FFE2AE",
+  "$prism-sky": "#67C7FC",
+  "$prism-yellow": "#F8FD6D",
+  "$prism-gold": "#FDDB74",
+  "$prism-red": "#FF3C25",
+  "$prism-blue": "#1A2C82"
 }

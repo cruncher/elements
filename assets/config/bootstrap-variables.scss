@@ -38,6 +38,60 @@ $green:   #7ed321 !default;
 $green-dark: #699b32;
 $green-text: #487915;
 
+// Prism neutral ramp (Figma "EPFL Masters - Exploration"). A cool slate scale;
+// $ink is the primary text colour, $slate secondary/muted, $surface the tinted
+// page background.
+$ink:      #020618 !default;   // primary text (near-black navy)
+$slate:    #45556C !default;   // secondary / muted text
+$surface:  #F5F6F8 !default;   // tinted page / section background
+$hairline: #CCCCCC !default;   // borders
+
+// Prism saturated accents (Figma). NOTE: provisional — $primary is still EPFL
+// red pending a brand decision. These are exposed as .text-accent-*/.bg-accent-*
+// utilities (see config/accents.scss), not wired into $theme-colors yet.
+$accent-blue:    #0000DB !default;
+$accent-magenta: #DB0059 !default;
+$accent-green:   #00E200 !default;
+
+$accents: () !default;
+$accents: map-merge((
+  "blue":    $accent-blue,
+  "magenta": $accent-magenta,
+  "green":   $accent-green,
+), $accents);
+
+// Pale category tints (card / section backgrounds).
+$tints: () !default;
+$tints: map-merge((
+  "lavender": #F0F0FF,
+  "pink":     #FFEFF4,
+  "sky":      #DFEEFF,
+  "peach":    #FFE2AE,
+), $tints);
+
+// Prism brand gradient stops (Figma "EPFL Masters - Exploration")
+$prism-sky:    #67C7FC !default;
+$prism-yellow: #F8FD6D !default;
+$prism-gold:   #FDDB74 !default;
+$prism-red:    #FF3C25 !default;
+$prism-blue:   #1A2C82 !default;
+
+// Named gradients. Consumed by the `.bg-gradient-*` utilities (see
+// config/gradients.scss) so a gradient can be applied to any component.
+// - prism:          the button/pill gradient (yellow → red → blue)
+// - prism-sky:      the hero gradient (sky → gold → red → deep blue)
+// - prism-spectrum: the conic "new light" rainbow
+$gradient-prism:          linear-gradient(135deg, $prism-yellow 18%, $prism-red 61%, $prism-blue 100%) !default;
+$gradient-prism-sky:      linear-gradient(170deg, $prism-sky 0%, $prism-gold 0%, $prism-red 45%, $prism-blue 100%) !default;
+$gradient-prism-spectrum: conic-gradient(from 180deg, #FFFDFA, #FFAC24, #CD0F88, #0AA0E3, #FFFDFA) !default;
+
+$gradients: () !default;
+$gradients: map-merge((
+  "prism":          $gradient-prism,
+  "prism-sky":      $gradient-prism-sky,
+  "prism-spectrum": $gradient-prism-spectrum,
+), $gradients);
+
 $colors: () !default;
 $colors: map-merge((
   "blue":       $blue,
@@ -129,7 +183,7 @@ $sizes: map-merge((
 // Settings for the `<body>` element.
 
 $body-bg:                   $white !default;
-$body-color:                $black !default;
+$body-color:                $ink !default;
 
 // Links
 //
@@ -194,11 +248,16 @@ $line-height-lg:              1.5 !default;
 $line-height-sm:              1.5 !default;
 
 $border-width:                1px !default;
-$border-color:                $gray-200 !default;
+$border-color:                $hairline !default;
 
-$border-radius:               2px !default;
-$border-radius-lg:            4px !default;
+$border-radius:               0.25rem !default;   // 4px  — inputs, small elements
+$border-radius-lg:            1rem !default;       // 16px — cards
 $border-radius-sm:            2px !default;
+
+// Elevation scale (Figma). Powers the .shadow* utilities and card shadow.
+$box-shadow-sm:               0 1px 3px rgba($black, 0.10) !default;
+$box-shadow:                  0 4px 20px rgba($black, 0.10) !default;
+$box-shadow-lg:               0 4px 46px rgba(#aaaaaa, 0.25) !default;
 
 $component-active-color:      $white !default;
 $component-active-bg:         theme-color("primary") !default;
@@ -217,7 +276,7 @@ $transition-collapse:         height .35s ease !default;
 // stylelint-disable value-keyword-case
 // official font is Suisse Int'l, but the license only allow to host
 // on a epfl domain, so we set it to Arial, the official fallback
-$font-family-sans-serif:      Arial, sans-serif, !default;
+$font-family-sans-serif:      'Suisse Intl', Arial, sans-serif !default;
 $font-family-monospace:       monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -229,6 +288,8 @@ $font-size-xs:                0.778rem;
 
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-semibold:        600 !default;
 $font-weight-bold:            700 !default;
 
 $font-weight-base:            $font-weight-normal !default;
@@ -243,7 +304,7 @@ $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      math.div($spacer, 2) !default;
 $headings-font-family:        inherit !default;
-$headings-font-weight:        400 !default;
+$headings-font-weight:        $font-weight-medium !default;   // Prism headings are Medium (500), not bold
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 

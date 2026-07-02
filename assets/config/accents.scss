@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+// Accent & tint utilities
+//
+// Generates colour and tinted-background helpers from the `$accents` and
+// `$tints` maps (see bootstrap-variables.scss):
+//   .text-accent-{name} / .bg-accent-{name}  — saturated Prism accents
+//   .bg-tint-{name}                          — pale category backgrounds
+// Kept separate from $theme-colors so they don't pull in the full set of
+// Bootstrap component variants while the accent/brand decision is pending.
+
+@each $name, $value in $accents {
+  .text-accent-#{$name} { color: $value !important; }
+  .bg-accent-#{$name}   { background-color: $value !important; }
+}
+
+@each $name, $value in $tints {
+  .bg-tint-#{$name} { background-color: $value !important; }
+}

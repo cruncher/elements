@@ -1,0 +1,58 @@
+@charset 'utf-8';
+
+// Suisse Int'l (EPFL licensed) — upright (roman) weights, WebS subset, woff2.
+// Italics and the Condensed / WebXL cuts are intentionally omitted for now.
+//
+// The font files are LICENSED and must not be committed to this (public) styleguide
+// repo, so the originals live in the enclosing Django repo at static/fonts/. Webpack
+// (asset/resource) reads them from there at build time and emits them into build/
+// (which is gitignored), so the licensed originals never enter this repo.
+$suisse-path: '../../../fonts/SuisseIntl-WebS';
+
+@font-face {
+  font-family: 'Suisse Intl';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$suisse-path}/SuisseIntlEPFL-Light-WebS.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$suisse-path}/SuisseIntlEPFL-Regular-WebS.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$suisse-path}/SuisseIntlEPFL-Medium-WebS.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$suisse-path}/SuisseIntlEPFL-SemiBold-WebS.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$suisse-path}/SuisseIntlEPFL-Bold-WebS.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('#{$suisse-path}/SuisseIntlEPFL-Black-WebS.woff2') format('woff2');
+}
