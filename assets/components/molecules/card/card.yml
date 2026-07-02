@@ -9,7 +9,9 @@ variants:
       elevation. Radius and shadow are opt-in utilities, not baked into `.card`.
   - name: text
     title: Text card (Prism)
-    notes: A card with no image — `.rounded-16` + `.shadow-20`, title, body and `.card-info` meta.
+    notes: |
+      The imageless Masters-detail card: a program `.badge` on top, title and text, then
+      a `.card-footer` with two default badges (left) and a `.btn-icon` chevron (right).
   - name: flat
     title: Flat card
     notes: Rounded but no shadow (`.rounded-16` only), for cards that sit flush on a surface.
