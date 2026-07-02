@@ -10,7 +10,9 @@
 @import '../config/helpers';
 @import '../config/gradients';
 @import '../config/accents';
-@import '../config/wordpress';
+@import '../config/roundings';
+@import '../config/shadows';
+// @import '../config/wordpress';
 @import '../../node_modules/tablesaw/src/tables.stack-mixin';
 
 // site:
@@ -22,6 +24,8 @@
 // atoms:
 @import 'atoms/button/button';
 @import 'atoms/tag/tag';
+@import 'atoms/badge/badge';
+@import 'atoms/pill/pill';
 // @import 'atoms/alert/alert';
 @import 'atoms/checkbox/checkbox';
 @import 'atoms/collapse/collapse';

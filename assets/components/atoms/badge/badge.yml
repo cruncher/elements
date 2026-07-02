@@ -1,0 +1,6 @@
+title: Badge
+name: badge
+notes: |
+  Compact solid-colour category labels used on the program cards. The default `.badge`
+  is sky blue; add a category modifier from the `$badges` map for others —
+  `.badge-master` (magenta), `.badge-spe` (blue), `.badge-minor` (green).

@@ -1,0 +1,9 @@
+title: Pill
+name: pill
+notes: |
+  Rounded, selectable chips (Figma "Filter-chip") used for **Interests** and
+  **Disciplinary Profile** in the master builder form. Default is white with a cool
+  hairline border and 14px text; add `.active` (or `aria-pressed="true"`) for the
+  selected state.
+
+  Distinct from the category `.badge` (solid colour, square-ish) and the legacy `.tag`.

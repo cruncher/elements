@@ -231,3 +231,32 @@ input[type="button"] {
     color: rgba($black, 0.6);
   }
 }
+
+// Circular icon button (Figma): a 44px round button holding a single .icon with
+// visually-hidden .sr-only label for accessibility. White with the cool card
+// hairline; the icon (chevron etc.) is chosen in the markup.
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;                   // fixed circle; border sits inside (border-box)
+  height: 44px;
+  padding: 0;
+  line-height: 0;
+  border-radius: 50%;
+  background: $white;
+  border: 1px solid #C8CCD9;
+  color: $ink;
+
+  .icon {
+    width: 1.25rem;              // 20px
+    height: 1.25rem;
+  }
+
+  &:hover,
+  &.hover {
+    background: $white;
+    border-color: $ink;
+    color: $ink;
+  }
+}

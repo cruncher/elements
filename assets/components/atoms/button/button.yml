@@ -36,6 +36,12 @@ variants:
       The Prism gradient button. Pill-shaped with the brand gradient fill
       (`$gradient-prism`). The same gradient is available as a `.bg-gradient-prism`
       utility for use on other components.
+  - name: icon
+    title: Icon button
+    notes: |
+      A circular 44px icon button (`.btn.btn-icon`), used on the Masters detail cards.
+      Contains a visually-hidden `.sr-only` label for accessibility and a visible
+      `.icon`; the icon (chevron etc.) is chosen in the markup.
 notes: |
   Button is your interaction friend when you want people to complete an action. By clicking a button, people expect to trigger an event, confirm a form or load a new page. Don't put many buttons on one single page. The primary action should be obvious for people.
 

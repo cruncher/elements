@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+// Prism category badge (Figma "Badge")
+//
+// A compact, solid-colour category label used on the program cards. Extends
+// Bootstrap's .badge geometry to match Figma (12px / 600 / 4px radius) and adds
+// category colours from the $badges map. Pair `.badge` with a `.badge-{category}`.
+
+.badge {
+  display: inline-block;
+  padding: 4px 4px 6px;                 // Figma: 4/4/6 (heavier bottom, optical)
+  border-radius: $border-radius;        // 4px
+  font-size: 0.75rem;                   // 12px
+  line-height: 1rem;                    // 16px
+  font-weight: $font-weight-semibold;   // 600
+  background-color: #DFEEFF;            // sky — default badge colours
+  color: $badge-blue-text;              // #044A88
+}
+
+@each $name, $pair in $badges {
+  .badge-#{$name} {
+    background-color: nth($pair, 1);
+    color: nth($pair, 2);
+  }
+}

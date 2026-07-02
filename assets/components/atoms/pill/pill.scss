@@ -1,0 +1,44 @@
+@charset 'utf-8';
+
+// Prism pill (Figma "Filter-chip")
+//
+// A rounded, selectable chip used for Interests and Disciplinary Profile in the
+// master builder form. Default state is white with a cool hairline border; add
+// `.active` for the selected state.
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 999px;                 // pill
+  background: $white;
+  border: 1px solid #C8CCD9;            // cool hairline (matches card border)
+  font-size: 0.875rem;                  // 14px
+  line-height: 1.25rem;                 // 20px
+  font-weight: $font-weight-normal;
+  color: $ink;
+  cursor: pointer;
+  transition:
+    background 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    color 0.15s ease-in-out;
+
+  &:hover {
+    border-color: $ink;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 2px solid $ink;
+    outline-offset: 2px;
+  }
+
+  // Selected state — PROVISIONAL. Confirm colours against Figma's selected chip.
+  &.active,
+  &[aria-pressed="true"] {
+    background: $ink;
+    border-color: $ink;
+    color: $white;
+  }
+}

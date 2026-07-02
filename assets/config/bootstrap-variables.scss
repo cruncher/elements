@@ -69,6 +69,21 @@ $tints: map-merge((
   "peach":    #FFE2AE,
 ), $tints);
 
+// Category badges (Figma "Badge") — a (background, text) colour pair per
+// category, used on the program cards. Consumed by .tag-{category} (see
+// atoms/tag/tag.scss). Two dark text shades below aren't elsewhere in the palette.
+$badge-green-text: #0D542B !default;
+$badge-blue-text:  #044A88 !default;
+
+// The default .badge is the sky/dark-blue pair (#DFEEFF / #044A88); the map holds
+// only the coloured category overrides.
+$badges: () !default;
+$badges: map-merge((
+  "master":  ($accent-magenta, #FFEFF4),           // magenta bg / pink text
+  "spe":     ($accent-blue,    #F0F0FF),           // blue bg / lavender text
+  "minor":   ($accent-green,   $badge-green-text), // green bg / dark-green text
+), $badges);
+
 // Prism brand gradient stops (Figma "EPFL Masters - Exploration")
 $prism-sky:    #67C7FC !default;
 $prism-yellow: #F8FD6D !default;
@@ -254,10 +269,28 @@ $border-radius:               0.25rem !default;   // 4px  — inputs, small elem
 $border-radius-lg:            1rem !default;       // 16px — cards
 $border-radius-sm:            2px !default;
 
-// Elevation scale (Figma). Powers the .shadow* utilities and card shadow.
+// Numeric corner-radius utilities. Generates `.rounded-{px}` classes (see
+// config/roundings.scss). Keyed by the pixel value for legibility; add sizes
+// here as they turn up in the Figma.
+$roundings: () !default;
+$roundings: map-merge((
+  16: 1rem,      // 1rem  = 16px  — standard cards
+  20: 1.25rem,   // 1.25rem = 20px — Masters cards
+), $roundings);
+
+// Elevation scale (Figma). Powers Bootstrap's named .shadow-sm/.shadow/.shadow-lg.
 $box-shadow-sm:               0 1px 3px rgba($black, 0.10) !default;
 $box-shadow:                  0 4px 20px rgba($black, 0.10) !default;
 $box-shadow-lg:               0 4px 46px rgba(#aaaaaa, 0.25) !default;
+
+// Numeric shadow utilities. Generates `.shadow-{blur}` classes (see
+// config/shadows.scss), keyed by blur radius. Add sizes as they turn up.
+$shadows: () !default;
+$shadows: map-merge((
+  3:  (0 1px 3px rgba($black, 0.10)),      // subtle
+  20: (0 4px 20px rgba($black, 0.10)),     // standard card
+  46: (0 4px 46px rgba(#aaaaaa, 0.25)),    // large / floating
+), $shadows);
 
 $component-active-color:      $white !default;
 $component-active-bg:         theme-color("primary") !default;
@@ -723,11 +756,11 @@ $jumbotron-bg:                      $gray-200 !default;
 
 // Cards
 
-$card-spacer-y:                     0.9rem !default;
-$card-spacer-x:                     1.35rem !default;
+$card-spacer-y:                     1rem !default;    // 16px body padding (Figma)
+$card-spacer-x:                     1rem !default;    // 16px body padding (Figma)
 $card-border-width:                 $border-width !default;
-$card-border-radius:                $border-radius !default;
-$card-border-color:                 $gray-200 !default;
+$card-border-radius:                0 !default;       // square by default; opt in with .rounded-16
+$card-border-color:                 #C8CCD9 !default; // cool-grey card hairline (Figma)
 $card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
 $card-cap-bg:                       transparent !default;
 $card-bg:                           $white !default;

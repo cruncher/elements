@@ -2,16 +2,20 @@ title: Card
 name: card
 wrapper: col-md-6
 variants:
-  - name: link
-    title: Full Link
-  - name: inside-links
-    title: Inside Links
-  - name: news
-    title: News card
-  - name: news-horizontal
-    title: Horizontal news card
-    wrapper: col-md-12
-    notes: A variation of the news card, but with a horizontal layout on larger screens.
+  - name: image
+    title: Image card (Prism)
+    notes: |
+      The standard Figma card — image on top, `.rounded-16` corners and `.shadow-20`
+      elevation. Radius and shadow are opt-in utilities, not baked into `.card`.
+  - name: text
+    title: Text card (Prism)
+    notes: A card with no image — `.rounded-16` + `.shadow-20`, title, body and `.card-info` meta.
+  - name: flat
+    title: Flat card
+    notes: Rounded but no shadow (`.rounded-16` only), for cards that sit flush on a surface.
+  - name: program
+    title: Program card
+    notes: The program card (Master + minor / specialisation combinations), distinguished by a larger `.rounded-20` radius.
 notes: |
   The card component is the component to use for all the card-looking elements. Classes can extend it to adapt its look and feel based on the needs.
 

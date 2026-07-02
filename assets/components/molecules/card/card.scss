@@ -3,11 +3,10 @@
 
 // Normal card
 .card {
-  border-color: $gray-100;
-  border-radius: 0;
   flex: 1 1 0%;
   max-width: 100%;
   margin-bottom: $grid-gutter-width;
+  // No radius/shadow by default — opt in with .rounded-16 / .shadow-20.
 
   .bg-gray-100 & {
     // Watch out for this, if a card is inside a white area that is
@@ -18,6 +17,21 @@
 
 .card-sm {
   margin-bottom: math.div($grid-gutter-width, 2);
+}
+
+// Rounded cards: round the top of the image to the card's inner radius
+// (radius − border-width) rather than clipping the card with overflow: hidden.
+// Generated for every size in $roundings, so .rounded-16 / .rounded-20 / … all
+// work. The inner <img> gets it too — border-radius on the <picture> wrapper
+// alone won't clip a replaced element.
+@each $px, $radius in $roundings {
+  .card.rounded-#{$px} > .card-img-top {
+    &,
+    img {
+      border-top-left-radius: calc(#{$radius} - #{$card-border-width});
+      border-top-right-radius: calc(#{$radius} - #{$card-border-width});
+    }
+  }
 }
 
 .card-gray {

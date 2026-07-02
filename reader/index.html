@@ -37,6 +37,26 @@
 
 <body data-spy="scroll" data-target="#intermediate-nav" data-offset="0">
   <div id="styleguide"></div>
+
+  <!--
+    Inline the icon sprites so `#icon-*` references resolve inside the styleguide.
+    Unlike the consuming Django site, the reader has no template to set
+    window.svgPath / run svgIcons(), so icons would otherwise render blank.
+  -->
+  <script>
+    ['icons/icons.svg', 'icons/feather-sprite.svg'].forEach(function (path) {
+      fetch(path)
+        .then(function (r) { return r.ok ? r.text() : ''; })
+        .then(function (svg) {
+          if (!svg) return;
+          var holder = document.createElement('div');
+          holder.setAttribute('aria-hidden', 'true');
+          holder.style.display = 'none';
+          holder.innerHTML = svg;
+          document.body.insertAdjacentElement('afterbegin', holder);
+        });
+    });
+  </script>
 </body>
 
 </html>
