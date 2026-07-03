@@ -29,6 +29,7 @@
 
     @include media-breakpoint-up(xl) {
       margin-right: 0;
+      background: var(--color-background-transparent-soft, #FFFFFFA6);
     }
   }
 
