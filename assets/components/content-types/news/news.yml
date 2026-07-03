@@ -14,8 +14,6 @@ variants:
     wrapper: bg-gray-100 py-4
   - name: highlighted
     title: Highlighted
-  - name: highlighted-carousel
-    title: Highlighted Carousel
   - name: latest-two
     title: Latest two
   - name: basic-teaser

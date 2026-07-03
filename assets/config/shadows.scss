@@ -1,7 +1,6 @@
 @charset 'utf-8';
 
 // Shadow utilities
-//
 // Generates a `.shadow-{blur}` class for every entry in the `$shadows` map
 // (see bootstrap-variables.scss), keyed by blur radius, e.g. `.shadow-20`.
 // Add sizes to the map as they are discovered in the Figma design.

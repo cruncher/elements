@@ -8,7 +8,7 @@
   padding: (.8125 * $spacer) (.875 * $spacer);
   font-size: 1 * $font-size-base;
   font-weight: bold !important;
-  
+
   @include media-breakpoint-up(sm) {
     padding: (.5 * $spacer) (.9375 * $spacer);
   }
@@ -52,7 +52,7 @@
     position: relative;
 
     span {
-      background: color('red');
+      //background: color('red');
 
       &:nth-child(1) {
         transform:

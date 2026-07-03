@@ -1,7 +1,6 @@
 @charset 'utf-8';
 
 // Corner-radius utilities
-//
 // Generates a `.rounded-{px}` class for every entry in the `$roundings` map
 // (see bootstrap-variables.scss), e.g. `.rounded-16` → border-radius: 1rem.
 // Add sizes to the map as they are discovered in the Figma design.

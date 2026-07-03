@@ -1,6 +1,0 @@
-title: Key number group
-name: key-number-group
-wrapper: bg-gray-100
-variants:
-  - name: hn
-    title: Highlighted number

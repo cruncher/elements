@@ -7,7 +7,7 @@ button.btn,
 input[type="button"] {
   &:disabled,
   &.disabled { opacity: 1; }
-  
+
   &:focus,
   &:focus-visible,
   &.focus {
@@ -39,7 +39,7 @@ input[type="button"] {
     background: $red-dark;
     border-color: $red-dark;
   }
-  
+
   &:focus,
   &:focus-visible,
   &.focus {
@@ -134,7 +134,7 @@ input[type="button"] {
     border-color: $canard-dark;
     color: $white;
   }
-  
+
   &:focus,
   &:focus-visible,
   &.focus {
@@ -175,12 +175,12 @@ input[type="button"] {
 // fill, semibold white label. Background comes from $gradient-prism so it
 // stays in sync with the .bg-gradient-prism utility.
 .btn-gradient {
+  padding: 0.5rem 1.125rem;           // 8px 18px
+  background: $gradient-prism;
   border: 0;
   border-radius: 2rem;                // 32px pill
-  padding: 0.5rem 1.125rem;           // 8px 18px
-  color: $white;
   font-weight: $font-weight-semibold;
-  background: $gradient-prism;
+  color: $white;
   box-shadow: 0 1px 3px rgba($black, 0.35);
   transition: filter 0.15s, box-shadow 0.15s;
 
@@ -242,10 +242,10 @@ input[type="button"] {
   width: 44px;                   // fixed circle; border sits inside (border-box)
   height: 44px;
   padding: 0;
-  line-height: 0;
-  border-radius: 50%;
   background: $white;
   border: 1px solid #C8CCD9;
+  line-height: 0;
+  border-radius: 50%;
   color: $ink;
 
   .icon {
