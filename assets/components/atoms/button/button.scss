@@ -68,6 +68,14 @@ input[type="button"] {
   }
 }
 
+.btn-pill {
+  border-radius: 2rem;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  padding-top: 0.5625rem;
+  padding-bottom: 0.5625rem;
+}
+
 .btn-secondary {
   background: transparent;
   border-color: $gray-500;
@@ -241,6 +249,7 @@ input[type="button"] {
   justify-content: center;
   width: 44px;                   // fixed circle; border sits inside (border-box)
   height: 44px;
+  min-width: 44px;
   padding: 0;
   background: $white;
   border: 1px solid #C8CCD9;

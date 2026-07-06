@@ -68,6 +68,10 @@ a.card-gray:hover .card-body { background: $white; }
     margin-top: .5em;
   }
 
+  p {
+    font-size: $font-size-base;
+  }
+
   p:last-of-type {
     margin-bottom: 0;
   }
@@ -81,15 +85,22 @@ a.card-gray:hover .card-body { background: $white; }
   &.card-sm {
     padding: $card-spacer-x * 0.5;
   }
+
+
 }
 
 .card-header {
   border-color: $hr-border-color;
 }
 
+
 .card-footer {
   padding-bottom: $card-spacer-x;
   border: 0;
+
+  &.d-lg-flex {
+    gap: $card-spacer-x * 0.5;
+  }
 }
 
 // Distinction is when you have a little red fancy flag in the card body.
