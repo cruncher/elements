@@ -10,7 +10,8 @@
     display: flex;
     flex-wrap: wrap;
 
-    > .card {
+    > .card,
+    &.two-cols > .card {
 
       // only one card is present
       &:first-child:last-child {
@@ -56,6 +57,7 @@
         margin: $spacer * 0.5;
       }
     }
+
 
     &.card-deck-line {
 
