@@ -7,13 +7,28 @@
 
 .badge {
   display: inline-block;
-  padding: 4px 4px 6px;                 // Figma: 4/4/6 (heavier bottom, optical)
+  padding: 4px 6px;                     // Figma: 4/4/6 (heavier bottom, optical)
   border-radius: $border-radius;        // 4px
   font-size: 0.75rem;                   // 12px
   line-height: 1rem;                    // 16px
   font-weight: $font-weight-semibold;   // 600
   background-color: #DFEEFF;            // sky — default badge colours
   color: $badge-blue-text;              // #044A88
+}
+
+.badge-master {
+  background-color: $accent-magenta;
+  color: $white;
+}
+
+.badge-spe {
+  background-color: $accent-blue;
+  color: $white;
+}
+
+.badge-minor {
+  background-color: $accent-green;
+  color: $badge-green-text;
 }
 
 //@each $name, $pair in $badges {
