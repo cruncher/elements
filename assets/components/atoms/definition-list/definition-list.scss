@@ -16,26 +16,26 @@
 // Definition list displayed in a table-like layout.
 .definition-list-grid {
   display: grid;
-  grid-template-columns: minmax(min-content, 100px) 1fr;
+  grid-template-columns: minmax(min-content, 180px) 1fr;
   grid-auto-rows: auto;
   border: none;
 
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+
   dt {
     grid-column: 1;
-    font-weight: $font-weight-base;
-    color: $text-muted;
     padding-right: math.div($grid-gutter-width, 2);
-    &:last-of-type { border-bottom: none; }
+
 
     &.definition-list-item-full {
       padding-bottom: 0;
-      border-bottom: none;
     }
   }
 
   dd {
     grid-column: 2;
-    &:last-of-type { border-bottom: none; }
   }
 
   dt,
@@ -46,7 +46,13 @@
 
     &:first-of-type {
       padding-top: math.div($grid-gutter-width, 2);
-      border-top: $border-width solid $border-color;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    dt {
+      border-bottom: none;
+      margin-bottom: 0;
     }
   }
 
