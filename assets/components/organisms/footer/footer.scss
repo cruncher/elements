@@ -182,9 +182,11 @@
 // ----------------
 // Dark footer
 // ----------------
+
 .bg-dark {
   .footer a {
     color: $white;
+    text-decoration: none;
 
     &:hover {
       color: $red;
