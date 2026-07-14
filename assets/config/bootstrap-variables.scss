@@ -96,7 +96,7 @@ $prism-blue:   #1A2C82 !default;
 // - prism:          the button/pill gradient (yellow → red → blue)
 // - prism-sky:      the hero gradient (sky → gold → red → deep blue)
 // - prism-spectrum: the conic "new light" rainbow
-$gradient-prism:          linear-gradient(135deg, $prism-yellow 18%, $prism-red 61%, $prism-blue 100%) !default;
+$gradient-prism:          linear-gradient(91.35deg, #FDDB74 -60.82%, #FF3C25 40.69%, #1A2C82 129.42%);
 $gradient-prism-sky:      linear-gradient(170deg, $prism-sky 0%, $prism-gold 0%, $prism-red 45%, $prism-blue 100%) !default;
 $gradient-prism-spectrum: conic-gradient(from 180deg, #FFFDFA, #FFAC24, #CD0F88, #0AA0E3, #FFFDFA) !default;
 

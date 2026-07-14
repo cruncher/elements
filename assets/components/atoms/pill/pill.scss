@@ -41,3 +41,19 @@
     color: $white;
   }
 }
+
+label.pill {
+  color: #020618 !important;
+}
+
+.custom-control-input:focus ~ label.pill {
+  outline: 2px solid $ink;
+  outline-offset: 2px;
+}
+
+.custom-control-input:checked ~ label.pill {
+  outline-color: #FF5C5C;
+  border-color: #FF5C5C;
+  background-color: #FFE6E0;
+  color: #BD3840 !important;
+}
