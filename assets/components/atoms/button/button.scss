@@ -256,6 +256,8 @@ input[type="button"] {
   justify-content: center;
   width: 44px;                   // fixed circle; border sits inside (border-box)
   height: 44px;
+  flex-grow: 0 !important;
+  flex-shrink: 0 !important;
   min-width: 44px;
   padding: 0;
   background: $white;
