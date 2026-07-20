@@ -97,7 +97,7 @@ input[type="button"] {
 
   &:hover,
   &.hover {
-    background: $gray-100;
+    background: $gray-100 !important;
     border-color: $gray-600;
 
     .bg-dark & {

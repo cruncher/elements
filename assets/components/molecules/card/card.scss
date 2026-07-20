@@ -98,7 +98,7 @@ a.card-gray:hover .card-body { background: $white; }
   padding-bottom: $card-spacer-x;
   border: 0;
 
-  &.d-lg-flex {
+  &.d-flex {
     gap: $card-spacer-x * 0.5;
   }
 }
@@ -235,9 +235,9 @@ a.card {
     color: $body-color;
     border-color: $body-color;
 
-    .card-title {
-      color: $link-hover-color;
-    }
+    //.card-title {
+    //  color: $link-hover-color;
+    //}
   }
 
   &.link-trapeze-horizontal:before {
